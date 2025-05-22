@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E0E0E0"  android:padding="16dp"
+    tools:context=".MainActivity"> <com.google.android.material.button.MaterialButton
+    android:id="@+id/btn5Min"
+    style="@style/BubbleButton"
+    android:text="5 Mins"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toStartOf="@+id/btn10Min"
+    app:layout_constraintHorizontal_chainStyle="packed"
+    app:layout_constraintTop_toBottomOf="@+id/guideline_top"
+    app:layout_constraintVertical_chainStyle="packed"
+    android:layout_marginTop="40dp"
+    android:layout_marginStart="16dp"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn10Min"
+        style="@style/BubbleButton"
+        android:text="10 Mins"
+        app:layout_constraintTop_toTopOf="@+id/btn5Min"
+        app:layout_constraintStart_toEndOf="@+id/btn5Min"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="10dp"/> <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn15Min"
+        style="@style/BubbleButton"
+        android:text="15 Mins"
+        app:layout_constraintTop_toBottomOf="@+id/btn5Min"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.25"
+        android:layout_marginTop="24dp"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn30Min"
+        style="@style/BubbleButton"
+        android:text="30 Mins"
+        app:layout_constraintTop_toBottomOf="@+id/btn10Min"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.75"
+        android:layout_marginTop="48dp"/> <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn1Hour"
+        style="@style/BubbleButton"
+        android:text="1 Hour"
+        app:layout_constraintTop_toBottomOf="@+id/btn15Min"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btn2Hours"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        android:layout_marginTop="32dp"
+        android:layout_marginStart="16dp"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn2Hours"
+        style="@style/BubbleButton"
+        android:text="2 Hours"
+        app:layout_constraintTop_toBottomOf="@+id/btn30Min"
+        app:layout_constraintStart_toEndOf="@+id/btn1Hour"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/btn1Hour"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="24dp"/> <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.05" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
